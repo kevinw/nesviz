@@ -1,0 +1,17 @@
+{
+  "name": "nes",
+  "version": "0.0.0",
+  "description": "",
+  "main": "nesextract.js",
+  "dependencies": {
+    "coffee-script": "^1.7.1",
+    "unzip": "^0.1.9",
+    "walk": "^2.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
