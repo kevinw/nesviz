@@ -3,8 +3,13 @@ walk = require "walk"
 fs = require "fs"
 path = require "path"
 
+romPath = "/Users/kevin/Desktop/roms/"
+
 handleROMData = (stream, cb) ->
-  console.log stream
+  stream.on "data", ->
+
+    #console.log arguments
+  #console.dir(stream)
 
 readROMZip = (filename) ->
   fs.createReadStream(filename)
@@ -19,7 +24,7 @@ readROMZip = (filename) ->
       console.error("error unziping " + filename)
 
 main = ->
-  walker = walk.walk "/Users/kevin/Desktop/Nintendo/"
+  walker = walk.walk romPath
   walker.on "file", (root, fileStats, next) ->
     filename = path.join(root, fileStats.name)
     if filename.match /\.zip$/i
