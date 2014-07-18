@@ -4,12 +4,12 @@ import struct
 import re
 import os.path
 import zipfile
-from pprint import pprint
 
 ROM_PATH = "/Users/kevin/Desktop/roms/"
 
 ROM_ZIP = re.compile(r"\.zip$", re.IGNORECASE)
 NES_ROM = re.compile(r"\.nes$", re.IGNORECASE)
+
 
 class SpriteLoader:
     def __init__(self, data):
